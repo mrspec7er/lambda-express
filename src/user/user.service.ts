@@ -19,8 +19,7 @@ const userService = {
   },
 
   getAll: async function () {
-    const user = await User.find();
-    return user;
+    return await User.find();
   },
 
   publishedCount: async function (
