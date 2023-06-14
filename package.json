@@ -5,6 +5,7 @@
   "scripts": {
     "start": "sls deploy",
     "dev": "sls offline",
+    "commit": "git-cz",
     "build": "tsc"
   },
   "dependencies": {
@@ -20,6 +21,13 @@
     "typescript": "^5.1.3"
   },
   "devDependencies": {
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
     "serverless-offline": "^12.0.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

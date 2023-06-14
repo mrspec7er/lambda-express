@@ -32,8 +32,7 @@ const articleService = {
   },
 
   getAll: async function () {
-    const articles = await Article.find();
-    return articles;
+    return await Article.find();
   },
 
   publish: async function (articleId: string) {
