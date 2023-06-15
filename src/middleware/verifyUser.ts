@@ -12,14 +12,15 @@ async function verifyUser(req: Request, res: Response, next: NextFunction) {
   });
 }
 
-// async function verifyUser(req: Request, res: Response, next: NextFunction) {
-//     if (req.oidc.user) {
-//       next();
-//     }
+async function verifyUserRole(req: Request, res: Response, next: NextFunction) {
+  if (req.oidc.user) {
+    //get user id and check the role
+    next();
+  }
 
-//     return res.status(203).json({
-//       message: "unauthorize user",
-//     });
-//   }
+  return res.status(203).json({
+    message: "unauthorize user",
+  });
+}
 
-export { verifyUser };
+export { verifyUser, verifyUserRole };
