@@ -24,4 +24,4 @@ async function verifyUser(req: Request, res: Response, next: NextFunction) {
 //   });
 // }
 
-export { verifyUser, verifyUserRole };
+export { verifyUser };
