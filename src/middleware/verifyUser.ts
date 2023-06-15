@@ -15,6 +15,7 @@ async function verifyUser(req: Request, res: Response, next: NextFunction) {
 async function verifyUserRole(req: Request, res: Response, next: NextFunction) {
   if (req.oidc.user) {
     //get user id and check the role
+    //search for user
     next();
   }
 
